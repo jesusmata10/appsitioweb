@@ -1,3 +1,3 @@
 # appsitioweb
 
-Catalogo de productos,db mysql
+Catalogo de productos, db mysql
