@@ -1,0 +1,27 @@
+<%- include layouts/header.ejs%>
+<div class="container">
+    <h1>
+        <%= title %>
+    </h1>
+    <div class="row">
+        <% if(typeof Libros != "undefined") { %>
+            <% for(var libro=0;libro<Libros.length;libro++) { %>
+                <div class="col-sm-6" style="">
+                    <div class="card mt-2 text-center" style="height: 650px ;">
+                        <img width="300" height="400" class="rounded mx-auto d-block" src="<%=Libros[libro].imagen%>" alt="..." >
+                        <div class="card-body">
+                            <h5 class="card-title"><%=Libros[libro].titulo%></h5>
+                            <p class="card-text"><%=Libros[libro].descripcion%></p>
+                            <h5>$ <%=Libros[libro].precio%></h5>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <%}%>
+    </div>
+</div>
+<%- include layouts/footer %>
+
